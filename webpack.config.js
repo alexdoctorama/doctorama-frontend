@@ -27,7 +27,7 @@ module.exports = {
     },
     allowedHosts: 'all',
     onAfterSetupMiddleware() {
-      opn(`http://localhost:${this.port}/react/template/index`);
+      opn(`http://ec2-16-171-147-152.eu-north-1.compute.amazonaws.com/:${this.port}/react/template/index`);
     },
   },
   // devServer: {
