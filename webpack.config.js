@@ -20,9 +20,12 @@ module.exports = {
   devServer: {
     port: 3001,
     historyApiFallback: true,
-    onAfterSetupMiddleware() {
-      opn(`http://localhost:${this.port}/react/template/index`);
-    },
+    public: 'ec2-16-171-147-152.eu-north-1.compute.amazonaws.com',
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+      "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization",
+    }
   },
   // devServer: {
   //   static: {
